@@ -1,0 +1,2 @@
+The relation and p-value between Temperature & Wind Speed are 0.021778833407596128, 0.029415762886339313
+The relation and p-value between Humidity & Wind Speed are 0.02859103313440882, 0.004245363773472843

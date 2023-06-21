@@ -1,10 +1,10 @@
-# This is pearsonr and p-value. 
+# This is pearsonr and p-value.
 # The results is Wind Speed does have relationships with Temperature and Humidity.
+
 import pandas as pd
 from scipy.stats import pearsonr
 
 df = pd.read_csv('climate_change_data.csv')
-df.fillna(0, inplace=True)
 
 column_list = df.columns.to_list()
 
@@ -22,5 +22,7 @@ for i in range(3, len(df.columns)):
         if p_value < .05:
             results.append(f'The relation and p-value between {column_list[i]} & {column_list[j]} are {corr}, {p_value}')
 
-for i in results:
-    print(i)
+with open('Global.txt', 'w', encoding='utf-8') as f:
+    for i in results:
+        f.write(i + '\n')
+    f.close()
